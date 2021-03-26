@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  padding: 20px;
+}
+
+.nav_links li {
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+
