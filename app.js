@@ -15,7 +15,7 @@ function onSignIn(googleUser) {
     localStorage.setItem("DISTANCE", getDistance);
   }
   
-  // Taking the postal code and displaying it on the search.html page
+  // Taking the postal code and displaying it on the search.html page to see the entire sentence at the top
   window.addEventListener("load", () => {
     const postalCode = localStorage.getItem("POSTALCODE");
     const distance = localStorage.getItem("DISTANCE");

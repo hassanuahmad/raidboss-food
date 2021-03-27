@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 # Google Places API Key
 API_KEY = 'AIzaSyB9R7udTrzDh82n8EqzB9FcfcY9RMCxtK0'
 
-# Use webscrapping to get the postal code and distance from the website
+# Use webscrapping to get the postal code and distance from the website and run the py program to get it working
 
 page = requests.get()
 # url_contents = requests.get(http://localhost/winhacks/search.html) 
