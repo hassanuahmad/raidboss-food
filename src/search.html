@@ -49,56 +49,13 @@
     <!-- Main Text -->
 
     <div class="container-fluid text-center mainSite" style="height: 855px">
-      <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="d-flex justify-content-center align-items-start pt-3 h-100">
         <div class="text-white">
-          <h1 class="mainText">Get Fresh Food Safe</h1>
-          <h1 class="secText">
-            Restaurants that provide take out or curbside pickup
+          <h1 class="mainText" style="font-size: 40px">
+            Local Vendors in Postal Code
+            <span id="result-postalCode"></span> within
+            <span id="result-distance"></span>km
           </h1>
-
-          <p style="color: #bc0402">
-            Enter your postal code and distance below
-          </p>
-
-          <div class="container">
-            <form action="./search.html" method="POST">
-              <div class="contact-form row" style="padding-top: 25px">
-                <div class="form-field col-lg-6">
-                  <input
-                    placeholder="Enter your postal code..."
-                    type="text"
-                    id="postal-code"
-                    class="input-text"
-                    name="postal-code"
-                    required
-                  />
-                  <label for="name" class="label">Postal Code</label>
-                </div>
-
-                <div class="form-field col-lg-6">
-                  <input
-                    placeholder="Enter your distance in km..."
-                    type="text"
-                    id="distance"
-                    class="input-text"
-                    name="distance"
-                    required
-                  />
-                  <label for="name" class="label">Distance</label>
-                </div>
-
-                <div class="form-field col-lg-12">
-                  <input
-                    onclick="handleSubmit()"
-                    type="submit"
-                    class="submit-btn"
-                    value="submit"
-                    name=""
-                  />
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .navbar-brand {
   padding: 20px;
 }
@@ -14,4 +19,101 @@
   align-items: center;
 }
 
+.mainSite {
+  background-color: #d4cab1;
+}
 
+.mainText {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 65px;
+  font-weight: bold;
+  color: #bc0402;
+  text-transform: uppercase;
+}
+
+.secText {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #bc0402;
+  text-transform: uppercase;
+}
+
+/*Contact Form*/
+
+.contactForm {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 3em;
+  line-height: 58px;
+  color: #bc0402;
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+  background: transparent;
+}
+
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  color: #bc0402;
+  border-color: #bc0402;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  background: transparent;
+}
+
+.contact-form .input-text + .label,
+.contact-form .input-text .not-empty + .label,
+.contact-form .input-text:valid + .label {
+  transform: translateY(-24px);
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+
+.contact-form .label {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #bc0402;
+  cursor: text;
+  text-transform: capitalize;
+  transition: transform 0.2s ease-in-out;
+  background: transparent;
+}
+
+.contact-form .submit-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  width: 200px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #bc0402;
+  transition: background-image 0.5s;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #ff6e69;
+  color: #fff;
+  transition: 0.5s;
+}
