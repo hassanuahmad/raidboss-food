@@ -11,8 +11,16 @@
     />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <link rel="stylesheet" href="index.css" />
-    <link rel="shortcut icon" type="image/png" href="./fav.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static', filename = 'styles/index.css')}}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{{url_for('static', filename = 'images/fav.png')}}"
+    />
 
     <!-- Bootstrap Import -->
     <link
@@ -31,7 +39,7 @@
     <nav class="navbar nav_links">
       <a class="navbar-brand" href="index.html"
         ><img
-          src="./logo.png"
+          src="{{url_for('static', filename = 'images/logo.png')}}"
           href="index.html"
           alt=""
           width="300"
@@ -46,20 +54,28 @@
       </ul>
     </nav>
 
-    <!-- Text with Postal Code and Distance -->
+    <!-- Main Text -->
 
     <div class="container-fluid text-center mainSite" style="height: 855px">
       <div class="d-flex justify-content-center align-items-start pt-3 h-100">
         <div class="text-white">
-          <h1 class="mainText" style="font-size: 40px">
+          <!-- <h1 class="mainText" style="font-size: 40px">
             Local Vendors in Postal Code
             <span id="result-postalCode"></span> within
             <span id="result-distance"></span>km
+          </h1> -->
+          <h1 class="mainText" style="font-size: 40px">
+            Local Vendors in Postal Code
+            {{ postalCode }} within {{ distance }} km
           </h1>
+
         </div>
       </div>
     </div>
 
-    <script type="text/javascript" src="./app.js"></script>
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename = 'app.js')}}"
+    ></script>
   </body>
 </html>

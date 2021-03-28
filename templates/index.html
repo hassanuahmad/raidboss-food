@@ -11,8 +11,16 @@
     />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <link rel="stylesheet" href="index.css" />
-    <link rel="shortcut icon" type="image/png" href="./fav.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static', filename = 'styles/index.css')}}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{{url_for('static', filename = 'images/fav.png')}}"
+    />
 
     <!-- Bootstrap Import -->
     <link
@@ -31,7 +39,7 @@
     <nav class="navbar nav_links">
       <a class="navbar-brand" href="index.html"
         ><img
-          src="./logo.png"
+          src="{{url_for('static', filename = 'images/logo.png')}}"
           href="index.html"
           alt=""
           width="300"
@@ -46,7 +54,7 @@
       </ul>
     </nav>
 
-    <!-- Header Text -->
+    <!-- Main Text -->
 
     <div class="container-fluid text-center mainSite" style="height: 855px">
       <div class="d-flex justify-content-center align-items-center h-100">
@@ -61,7 +69,7 @@
           </p>
 
           <div class="container">
-            <form action="search.html" method="POST">
+            <form action="/search" method="post">
               <div class="contact-form row" style="padding-top: 25px">
                 <div class="form-field col-lg-6">
                   <input
@@ -69,7 +77,7 @@
                     type="text"
                     id="postal-code"
                     class="input-text"
-                    name="postal-code"
+                    name="postalCode"
                     required
                   />
                   <label for="name" class="label">Postal Code</label>
@@ -93,7 +101,7 @@
                     type="submit"
                     class="submit-btn"
                     value="submit"
-                    name=""
+                    name="submit"
                   />
                 </div>
               </div>
@@ -103,6 +111,9 @@
       </div>
     </div>
 
-    <script type="text/javascript" src="./app.js"></script>
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename = 'app.js')}}"
+    ></script>
   </body>
 </html>
