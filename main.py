@@ -26,22 +26,25 @@ def search():
     lat_long = location.latitude, location.longitude
 
     lat, long = lat_long
-    print(lat, long)
 
-    places_endpoint = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json"
-    params_places = {
-        "key": API_KEY,
-        "location": f"{lat}, {long}",
-        "radius":  distance ,  # needs input from the webiste
-        "keyword": "curbside pickup",
-        "types": "food"
-    }
-    params_places = urlencode(params_places)
-    urlPlaces = f"{places_endpoint}?{params_places}"
+    def getJSONfile(latitude, longitude):
+        places_endpoint = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+        params_places = {
+            "key": API_KEY,
+            "location": f"{lat}, {long}",
+            "radius":  distance ,  # needs input from the webiste
+            "keyword": "curbside pickup",
+            "types": "food"
+        }
+        params_places = urlencode(params_places)
+        urlPlaces = f"{places_endpoint}?{params_places}"
 
-    PlacesReq = requests.get(urlPlaces)
-    # return the json instead of printing it
-    print(PlacesReq.json())
+        PlacesReq = requests.get(urlPlaces)
+        print(PlacesReq.json())
+        # return the json instead of printing it
+        return PlacesReq.json()
+
+    getJSONfile(lat, long)
 
     return render_template("search.html", postalCode=postalCode, distance=distance)
 
