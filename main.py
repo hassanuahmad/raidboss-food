@@ -20,7 +20,7 @@ def search():
     API_KEY = 'AIzaSyB9R7udTrzDh82n8EqzB9FcfcY9RMCxtK0'
 
     # gets latitude and longitude from user input of postal code ONLY WORKS IN CANADA
-    postal_code =  postalCode   # needs input from webpage also
+    postal_code = postalCode  # gets postal code from the website
     nomi = pgeocode.Nominatim('ca')
     location = nomi.query_postal_code(postal_code)
     lat_long = location.latitude, location.longitude
@@ -31,8 +31,8 @@ def search():
         places_endpoint = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json"
         params_places = {
             "key": API_KEY,
-            "location": f"{lat}, {long}",
-            "radius":  distance ,  # needs input from the webiste
+            "location": f"{latitude}, {longitude}",
+            "radius":  distance,  # gets distance from the website
             "keyword": "curbside pickup",
             "types": "food"
         }
@@ -41,12 +41,11 @@ def search():
 
         PlacesReq = requests.get(urlPlaces)
         print(PlacesReq.json())
-        # return the json instead of printing it
         return PlacesReq.json()
 
-    getJSONfile(lat, long)
+    jsonData = getJSONfile(lat, long)
 
-    return render_template("search.html", postalCode=postalCode, distance=distance)
+    return render_template("search.html", postalCode=postalCode, distance=distance, jsonData=jsonData)
 
 
 if __name__ == "__main__":
