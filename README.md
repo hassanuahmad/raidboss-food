@@ -14,5 +14,5 @@ pip install flask
 
 ## Contributors
 
-Hassan Ahmad
+Hassan Ahmad, 
 Aaron Bermudez
