@@ -10,7 +10,6 @@ Use [pip](https://pip.pypa.io/en/stable/) to install all the different libraries
 pip install pgeocode
 pip install requests
 pip install flask
-pip install python-google-places
 ```
 
 ## Contributors
