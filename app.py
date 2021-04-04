@@ -3,8 +3,11 @@ import pgeocode
 import requests
 from urllib.parse import urlencode
 from googleplaces import GooglePlaces, types, lang
+import jinja2
 
 app = Flask(__name__)
+env = jinja2.Environment()
+env.globals.update(zip=zip)
 
 
 @app.route('/')
@@ -31,7 +34,8 @@ def search():
 
     query_result = google_places.nearby_search(
         lat_lng={'lat': lat, 'lng': long},
-        keyword='curbside pickup',
+        # keyword='curbside pickup, delivery',
+        keyword='Restaurants',
         radius=int(distance) * 1000,
         types=[types.TYPE_RESTAURANT]
     )
@@ -39,20 +43,20 @@ def search():
     if query_result.has_attributions:
         print(query_result.html_attributions)
 
-    allPlaces = []
+    allNames = []
+    allPhones = []
+    allWeb = []
+
     for place in query_result.places:
         place.get_details()
-        # print(place.name)
-        # print(place.local_phone_number)
-        # print(place.website)
         placeN = place.name
         placeL = place.local_phone_number
         placeW = place.website
-        allPlaces.append(placeN)
-        allPlaces.append(placeL)
-        allPlaces.append(placeW)
+        allNames.append(placeN)
+        allPhones.append(placeL)
+        allWeb.append(placeW)
 
-    return render_template("search.html", postalCode=postalCode, distance=distance, allPlaces=allPlaces)
+    return render_template("search.html", postalCode=postalCode, distance=distance, allNames=allNames, allPhones=allPhones, allWeb=allWeb, zip=zip)
 
 
 if __name__ == "__main__":

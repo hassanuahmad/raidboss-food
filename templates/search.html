@@ -56,14 +56,18 @@
 
     <!-- Main Text -->
 
-    <div class="container-fluid text-center mainSite" style="height: 855px">
+    <div class="container-fluid text-center mainSite">
       <div class="d-flex justify-content-center align-items-start pt-3 h-100">
         <div class="text-white">
           <h1 class="mainText" style="font-size: 40px">
             Local Vendors in Postal Code {{ postalCode }} within {{ distance }}
             km
           </h1>
-          <p style="color: black; background-color: aliceblue;"> {{ allPlaces }} </p>
+          {% for (name, phone, website) in zip(allNames, allPhones, allWeb) %}
+          <p style="color: black; background-color: aliceblue">
+            {{ name }} {{ phone }} {{ website }}
+          </p>
+          {% endfor %}
         </div>
       </div>
     </div>
