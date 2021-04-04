@@ -16,4 +16,5 @@ pip install python-google-places
 ## Contributors
 
 Hassan Ahmad, 
-Aaron Bermudez
+Aaron Bermudez,
+Braythor
