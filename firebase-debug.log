@@ -78,3 +78,38 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [info] i  hosting: 127.0.0.1 - - [04/Apr/2021:05:53:12 +0000] "GET /__/firebase/8.3.2/firebase-performance.js HTTP/1.1" 200 38229 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [04/Apr/2021:05:53:12 +0000] \"GET /__/firebase/8.3.2/firebase-performance.js HTTP/1.1\" 200 38229 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36\""}}
 [info] i  hosting: 127.0.0.1 - - [04/Apr/2021:05:53:12 +0000] "GET /__/firebase/8.3.2/firebase-remote-config.js HTTP/1.1" 200 36779 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [04/Apr/2021:05:53:12 +0000] \"GET /__/firebase/8.3.2/firebase-remote-config.js HTTP/1.1\" 200 36779 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36\""}}
 [info] i  hosting: 127.0.0.1 - - [04/Apr/2021:05:53:12 +0000] "GET /favicon.ico HTTP/1.1" 200 4526 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [04/Apr/2021:05:53:12 +0000] \"GET /favicon.ico HTTP/1.1\" 200 4526 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36\""}}
+[debug] [2021-04-04T05:54:42.310Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T05:54:42.311Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hassa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2021-04-04T05:54:42.312Z] CLI Version:   9.8.0
+[debug] [2021-04-04T05:54:42.312Z] Platform:      win32
+[debug] [2021-04-04T05:54:42.312Z] Node Version:  v14.15.4
+[debug] [2021-04-04T05:54:42.313Z] Time:          Sun Apr 04 2021 01:54:42 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-04-04T05:54:42.313Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-04-04T05:54:42.318Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-04T05:54:42.318Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project local-rb-food. This may result in unexpected behavior. 
+[debug] [2021-04-04T05:54:42.334Z] [hub] writing locator at C:\Users\hassa\AppData\Local\Temp\hub-local-rb-food.json
+[debug] [2021-04-04T05:54:42.356Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/local-rb-food/webApps/-/config [none]
+[debug] [2021-04-04T05:54:42.616Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/local-rb-food/webApps/-/config 200
+[debug] [2021-04-04T05:54:42.616Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/local-rb-food/webApps/-/config {"projectId":"local-rb-food","appId":"1:252840562590:web:733c665d9e48ae4499508f","storageBucket":"local-rb-food.appspot.com","apiKey":"AIzaSyA-_LLwKNxITcAQSyqOKIfoQ7s-P5tfvwM","authDomain":"local-rb-food.firebaseapp.com","messagingSenderId":"252840562590","measurementId":"G-5TGY6RG2ND"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[warn] !  emulators: The Emulator UI requires a project ID to start. Configure your default project with 'firebase use' or pass the --project flag. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI requires a project ID to start. Configure your default project with 'firebase use' or pass the --project flag."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ localhost:5000 │
+└──────────┴────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: None
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [04/Apr/2021:05:54:46 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [04/Apr/2021:05:54:46 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36\""}}
