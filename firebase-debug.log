@@ -1,0 +1,37 @@
+[debug] [2021-04-04T05:53:06.727Z] ----------------------------------------------------------------------
+[debug] [2021-04-04T05:53:06.728Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hassa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2021-04-04T05:53:06.729Z] CLI Version:   9.8.0
+[debug] [2021-04-04T05:53:06.729Z] Platform:      win32
+[debug] [2021-04-04T05:53:06.729Z] Node Version:  v14.15.4
+[debug] [2021-04-04T05:53:06.730Z] Time:          Sun Apr 04 2021 01:53:06 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-04-04T05:53:06.730Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-04-04T05:53:06.735Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-04T05:53:06.735Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2021-04-04T05:53:06.751Z] [hub] writing locator at C:\Users\hassa\AppData\Local\Temp\hub-local-rb-food.json
+[debug] [2021-04-04T05:53:06.773Z] > refreshing access token with scopes: []
+[debug] [2021-04-04T05:53:06.774Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-04T05:53:06.874Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 04 Apr 2021 05:53:06 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-04T05:53:06.878Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/local-rb-food/webApps/-/config [none]
+[debug] [2021-04-04T05:53:07.229Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/local-rb-food/webApps/-/config 200
+[debug] [2021-04-04T05:53:07.229Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/local-rb-food/webApps/-/config {"projectId":"local-rb-food","appId":"1:252840562590:web:733c665d9e48ae4499508f","storageBucket":"local-rb-food.appspot.com","apiKey":"AIzaSyA-_LLwKNxITcAQSyqOKIfoQ7s-P5tfvwM","authDomain":"local-rb-food.firebaseapp.com","messagingSenderId":"252840562590","measurementId":"G-5TGY6RG2ND"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[warn] !  emulators: The Emulator UI requires a project ID to start. Configure your default project with 'firebase use' or pass the --project flag. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI requires a project ID to start. Configure your default project with 'firebase use' or pass the --project flag."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ localhost:5000 │
+└──────────┴────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: None
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
