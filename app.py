@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 from urllib.parse import urlencode
 from googleplaces import GooglePlaces, types, lang
 import jinja2
-load_dotenv()
 
 app = Flask(__name__)
 env = jinja2.Environment()
