@@ -1,7 +1,6 @@
 from flask import Flask, app, redirect, url_for, render_template, request
 import pgeocode
 import requests
-from dotenv import load_dotenv
 from urllib.parse import urlencode
 from googleplaces import GooglePlaces, types, lang
 import jinja2
