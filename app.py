@@ -1,7 +1,6 @@
 from flask import Flask, app, redirect, url_for, render_template, request
 import pgeocode
 import requests
-import os
 from urllib.parse import urlencode
 from googleplaces import GooglePlaces, types, lang
 import jinja2
@@ -22,7 +21,7 @@ def search():
     distance = request.form["distance"]
 
     # Google Places API Key
-    API_KEY = os.environ.GOOGLE_API_KEY
+    API_KEY = AIzaSyB9R7udTrzDh82n8EqzB9FcfcY9RMCxtK0
     google_places = GooglePlaces(API_KEY)
 
     # gets latitude and longitude from user input of postal code ONLY WORKS IN CANADA
