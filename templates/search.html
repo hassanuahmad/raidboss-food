@@ -78,37 +78,20 @@
                     {% for (name, phone, website) in zip(allNames, allPhones,
                     allWeb) %}
 
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button
-                                    class="accordion-button"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne"
-                                    aria-expanded="true"
-                                    aria-controls="collapseOne"
-                                >
-                                    {{ name }}
+                                <button class="accordion-button">
+                                    {{ name }} <span class="tab"></span>
+                                    <strong>{{ phone }}</strong>
+                                    <span class="tab"></span>
+                                    <a href="{{ website }}" target="_blank"
+                                        >Website</a
+                                    >
                                 </button>
                             </h2>
-                            <div
-                                id="collapseOne"
-                                class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample"
-                            >
-                                <div class="accordion-body">
-                                    <strong>{{ phone }}</strong><br />
-                                    {{ website }}
-                                </div>
-                            </div>
                         </div>
                     </div>
-
-                    <!-- <p style="color: black; background-color: aliceblue">
-                        {{ name }} {{ phone }} {{ website }}
-                    </p> -->
                     {% endfor %}
                 </div>
             </div>
