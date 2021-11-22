@@ -47,7 +47,7 @@ def search():
         print(query_result.html_attributions)
 
     allNames = []
-    allPhones = []
+    allPhones = [] 
     allWeb = []
 
     for place in query_result.places:
