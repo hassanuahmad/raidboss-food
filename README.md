@@ -1,20 +1,22 @@
-# Raidboss Food
+# raidboss-food
 
-A program that shows you local vendors within a user input radius and postal code, Based in Canada
+A web app that shows local vendors to support during the COVID-19 pandemic within a user-entered radius and postal code in Canada
 
-## Installation
+## Features to be Implemented
 
-Use [pip](https://pip.pypa.io/en/stable/) to install all the different libraries used in the python program
+ - Full user authentication
+ - Abilty to save restaurants and view them on your account
+ - Improve the UI of the website
+ - Abilty to search in USA
 
-```bash
-pip install pgeocode
-pip install requests
-pip install flask
-pip install python-google-places
-```
+## Tech Stack
+
+ - HTML/CSS
+ - Python
+ - JavaScript
 
 ## Contributors
 
-Hassan Ahmad, 
-Aaron Bermudez,
-Braythor
+ - Hassan Ahmad 
+ - Aaron Bermudez 
+ - Braythor
